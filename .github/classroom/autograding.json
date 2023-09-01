@@ -1,0 +1,54 @@
+{
+  "tests": [
+    {
+      "name": "test_problem_1.py",
+      "setup": "sudo -H pip3 install pytest",
+      "run": "pytest test_problem_1.py",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 15
+    },
+    {
+      "name": "test_problem_2.py",
+      "setup": "sudo -H pip3 install pytest",
+      "run": "pytest test_problem_2.py",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 15
+    },
+    {
+      "name": "test_problem_3.py",
+      "setup": "sudo -H pip3 install pytest",
+      "run": "pytest test_problem_3.py",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 15
+    },
+    {
+      "name": "test_problem_4.py",
+      "setup": "sudo -H pip3 install pytest",
+      "run": "pytest test_problem_4.py",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 15
+    },
+    {
+      "name": "test_problem_5.py",
+      "setup": "sudo -H pip3 install pytest",
+      "run": "pytest test_problem_5.py",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 20
+    }
+  ]
+}
