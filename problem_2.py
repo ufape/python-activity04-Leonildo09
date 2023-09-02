@@ -28,9 +28,23 @@ Os números são..: 12 13 17
 
 """
 
+def resto_de_2_e_3(x,y):
+    
+    if x < y:
+        for resto in range(x + 1, y):
+            if resto % 5 == 2 or resto % 5 == 3:
+                print(resto)
 
+    else:
+        for resto in range(y + 1, x):
+            if resto % 5 == 2 or resto % 5 == 3:
+                print(resto)
+                
 def main():
-    pass  # your code here
+    x = int(input('Digite o valor de x: '))
+    y = int(input('Digite o valor de y: '))
+
+    resto_de_2_e_3(x,y)
 
 
 if __name__ == '__main__':
