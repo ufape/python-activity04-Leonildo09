@@ -28,9 +28,23 @@ Os números são..: 12 13 17
 
 """
 
-
+def soma_cinco_pares_consecutivos(x):
+    
+    soma = 0
+    for i in range(x, x + 10, 2):
+        soma += i
+    return soma
+    
 def main():
-    pass  # your code here
+    while True:
+        x = int(input("Digite um valor inteiro : "))
+        if x == 0:
+            break
+        if x % 2 != 0:
+            print("O valor digitado não é par.")
+        else:
+            resultado = soma_cinco_pares_consecutivos(x)
+            print(f"A soma dos 5 pares consecutivos a partir de {x} é: {resultado}")
 
 
 if __name__ == '__main__':
