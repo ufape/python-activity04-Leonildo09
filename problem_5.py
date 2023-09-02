@@ -30,8 +30,30 @@ Teste 3: 7
 """
 
 
+def verifica_numero_primo(x):
+    
+    if x <= 1:
+        return False
+    if x <= 3:
+        return True
+    if x % 2 == 0 or x % 3 == 0:
+        return False
+    i = 5
+    while i * i <= x:
+        if x % i == 0 or x % (i + 2) == 0:
+            return False
+        i += 6
+    return True
+
+
 def main():
-    pass  # your code here
+    n = int(input("Digite o número de casos de teste: "))
+    for _ in range(n):
+        x = int(input("Digite um número: "))
+        if verifica_numero_primo(x):
+            print(f"{x} é primo")
+        else:
+            print(f"{x} não é primo")
 
 
 if __name__ == '__main__':
