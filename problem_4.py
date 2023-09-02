@@ -29,9 +29,22 @@ Teste 3: 28
 28 é perfeito.
 """
 
-
+def verifica_numero_perfeito(x):
+    
+    soma_divisores = 0
+    for i in range(1, x):
+        if x % i == 0:
+            soma_divisores += i
+    return soma_divisores == x
+    
 def main():
-    pass  # your code here
+    n = int(input("Digite o número de casos de teste: "))
+    for _ in range(n):
+        x = int(input("Digite um número: "))
+        if verifica_numero_perfeito(x):
+            print(f"{x} é perfeito")
+        else:
+            print(f"{x} não é perfeito")
 
 
 if __name__ == '__main__':
