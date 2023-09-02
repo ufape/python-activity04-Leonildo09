@@ -56,9 +56,48 @@ Aluno aprovado.
 
 """
 
+def calcular_media_ponderada(n1, n2, n3, n4):
+    
+    media = (n1 * 2 + n2 * 3 + n3 * 4 + n4) / 10
+    return media
 
+
+def verificar_situacao_aluno(media):
+    
+    if media >= 7.0:
+        return "Aluno aprovado."
+    elif media < 5.0:
+        return "Aluno reprovado."
+    else:
+        return "Aluno em exame."
+
+
+def calcular_media_final(media_anterior, nota_exame):
+    
+    media_final = (media_anterior + nota_exame) / 2
+    return media_final
+    
 def main():
-    pass  # your code here
+    n1 = float(input("Digite a nota 1: "))
+    n2 = float(input("Digite a nota 2: "))
+    n3 = float(input("Digite a nota 3: "))
+    n4 = float(input("Digite a nota 4: "))
+
+    
+    media = calcular_media_ponderada(n1, n2, n3, n4)
+    print(f"Media: {media:.1f}")
+
+    
+    situacao = verificar_situacao_aluno(media)
+    print(situacao)
+
+    if situacao == "Aluno em exame.":
+        
+        nota_exame = float(input("Digite a nota do exame: "))
+        
+        media_final = calcular_media_final(media, nota_exame)
+        print(f"Aluno {'aprovado' if media_final >= 5.0 else 'reprovado'}.")
+        print(f"Media final: {media_final:.1f}")
 
 
 if __name__ == '__main__':
